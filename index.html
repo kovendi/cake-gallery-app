@@ -6,13 +6,10 @@
 
   <title>Mini PWA Test</title>
 
-  <!-- Manifest -->
-  <link rel="manifest" href="/cake-gallery-app/assets/manifest-Dn0uwSVm.json" />
-
-  <!-- iOS special -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <link rel="apple-touch-icon" href="icon.png" />
+  <!-- FONTOS: relatív utak, nincs kezdő / -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <meta name="theme-color" content="#ffffff" />
 
   <style>
     body {
@@ -42,10 +39,9 @@
 
   <script>
     // Service worker regisztráció
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/cake-gallery-app/sw.js');
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/cake-gallery-app/sw.js");
     }
   </script>
-
 </body>
 </html>
